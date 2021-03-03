@@ -1,23 +1,21 @@
 import react from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Login from "./component/Login";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./component/Nav";
 import PrivateRoute from "./PrivateRoute";
-import Pref1 from "./component/Pref1";
 import Dashboard from "./component/Dashboard";
+import LoginPage from "./component/LoginPage";
 
 function App() {
   return (
     <Router>
-      <div>
-        <Nav />
-        <PrivateRoute path="/dashboard" component={Dashboard} />
-        <Route path="/login" component={Login} />
-        <Route exact path="/">
-          Home
-        </Route>
-      </div>
+      <Switch>
+        <div>
+          <Nav />
+          <Route path="/login" component={LoginPage} />
+          <PrivateRoute exact path="/" component={Dashboard} />
+        </div>
+      </Switch>
     </Router>
   );
 }
