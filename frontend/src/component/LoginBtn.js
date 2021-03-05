@@ -40,6 +40,7 @@ function LoginBtn({ imageSize }) {
           localStorage.setItem("authToken", auth.credential.idToken);
           localStorage.setItem("userImage", auth.user.photoURL);
           history.push("/");
+          handleClick();
         }
       })
       .catch((e) => {
@@ -47,6 +48,21 @@ function LoginBtn({ imageSize }) {
         localStorage.clear();
       });
   };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   return (
     <div
       onClick={googleSignIn}

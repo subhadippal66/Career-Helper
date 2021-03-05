@@ -5,6 +5,7 @@ import Nav from "./component/Nav";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "./component/Dashboard";
 import LoginPage from "./component/LoginPage";
+import Error404 from "./component/Error404";
 
 function App() {
   return (
@@ -12,9 +13,14 @@ function App() {
       <Switch>
         <div>
           <Nav />
-          <Route path="/login" component={LoginPage} />
+          <Route exact path="/login" component={LoginPage} />
           <PrivateRoute exact path="/" component={Dashboard} />
         </div>
+        {/* <div>
+          <Route path="*">
+            <Error404 />
+          </Route>
+        </div> */}
       </Switch>
     </Router>
   );
