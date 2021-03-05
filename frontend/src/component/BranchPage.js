@@ -1,4 +1,4 @@
-import { InputLabel, MenuItem, Select } from '@material-ui/core'
+import { Button, InputLabel, MenuItem, Select } from '@material-ui/core'
 import React from 'react'
 import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,12 +6,20 @@ import { makeStyles } from '@material-ui/core/styles';
 function BranchPage() {
     const useStyles = makeStyles((theme) => ({
         formControl: {
-          margin: theme.spacing(20),
+          display: 'flex' ,        
+          margin: 'auto',
+          maxWidth: 300 ,
           minWidth: 200,
+          marginTop: 20,
+          marginBottom: 100,
         },
-        selectEmpty: {
-          marginTop: theme.spacing(2),
-        },
+        button:{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minWidth: 150,
+          margin: 'auto',  
+        }
       }));
       
       
@@ -57,10 +65,12 @@ function BranchPage() {
             >
             <MenuItem value = {1}>Coding</MenuItem>
             <MenuItem value = {2} >Core </MenuItem>
-            <MenuItem value = {3}>Analytics</MenuItem>
-            
+            <MenuItem value = {3}>Analytics</MenuItem>            
             </Select>
-        </FormControl>                         
+        </FormControl>      
+        <Button variant="contained" color="primary" className={classes.button}>
+          NEXT
+        </Button>                   
         </div>
         
 
