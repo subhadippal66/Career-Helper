@@ -17,12 +17,16 @@ function Dashboard() {
     });
 
   return (
-    <div className=" bg-blue-300 flex flex-col items-center pt-20">
-      <h1 className="font-bold text-black text-xl text-center pb-4">
+    <div className=" bg-gray-800 flex flex-col items-center pt-20">
+      <h1 className="font-bold font-mono tracking-widest uppercase text-gray-100 text-xl text-center pb-2">
         DashBoard Home
       </h1>
       <div>
-        <HomePageCard />
+        <HomePageCard
+          heading="Coding Language"
+          details="A programming language is a formal language comprising a set of instructions that produce various kinds of output. Programming languages are used in computer programming to implement algorithms. Most programming languages consist of instructions for computers."
+          links={["C", "C++", "JAVA", "Python", "Ruby"]}
+        />
         <HomePageCard />
         <HomePageCard />
         <HomePageCard />

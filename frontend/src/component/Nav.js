@@ -36,10 +36,13 @@ function Nav() {
   return (
     <div className=" bg-gray-800 z-50 text-white w-full flex flex-row justify-between items-center p-3 font-bold text-xl fixed">
       <div>Target</div>
-      <div>
-        <Link to="/"> Home</Link>
-      </div>
-      <div>
+      <div className="flex flex-row items-center gap-10">
+        <div>
+          <Link to="/"> Home</Link>
+        </div>
+        <div>
+          <Link to="/branch"> Preference</Link>
+        </div>
         <div
           aria-describedby={id}
           variant="contained"
