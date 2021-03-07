@@ -6,6 +6,7 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "./component/Dashboard";
 import LoginPage from "./component/LoginPage";
 import Error404 from "./component/Error404";
+import BranchPage from "./component/BranchPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Nav />
           <Route exact path="/login" component={LoginPage} />
           <PrivateRoute exact path="/" component={Dashboard} />
+          <Route path="/branch" component={BranchPage} />
         </div>
         {/* <div>
           <Route path="*">

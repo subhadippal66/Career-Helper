@@ -34,7 +34,7 @@ function Nav() {
   const id = open ? "simple-popover" : undefined;
 
   return (
-    <div className=" bg-gray-800 text-white w-full flex flex-row justify-between items-center p-3 font-bold text-xl fixed">
+    <div className=" bg-gray-800 z-50 text-white w-full flex flex-row justify-between items-center p-3 font-bold text-xl fixed">
       <div>Target</div>
       <div>
         <Link to="/"> Home</Link>
