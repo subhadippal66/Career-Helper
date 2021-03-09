@@ -4,6 +4,10 @@ const port = 5000
 const router = express.Router()
 //database require
 const coding = require('./database/coding')
+const civil = require('./database/civil')
+
+
+
 const abc=  app.listen(port, ()=>{
     console.log('server started')
 })
@@ -19,11 +23,13 @@ app.get('/', (req, res)=>{
     res.send('Homepage')
 })
 
-console.log(coding)
 app.get('/api/:type', (req, res)=>{
-    // const {type} = req.params;
-    console.log(coding)
-    res.send(coding)
+    const {type} = req.params;
+    if(type=='coding'){
+        res.send(civil)
+    }else{
+        res.send('hello')
+    }
 })
 
 module.exports = abc

@@ -16,7 +16,7 @@ function App() {
           <Nav />
           <Route exact path="/login" component={LoginPage} />
           <PrivateRoute exact path="/" component={Dashboard} />
-          <Route path="/branch" component={BranchPage} />
+          <PrivateRoute path="/branch" component={BranchPage} />
         </div>
         {/* <div>
           <Route path="*">
