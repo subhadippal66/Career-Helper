@@ -5,7 +5,7 @@ const router = express.Router()
 //database require
 const coding = require('./database/coding')
 const civil = require('./database/civil')
-
+const cpp = require('./database/cpp')
 
 
 const abc=  app.listen(port, ()=>{
@@ -26,7 +26,7 @@ app.get('/', (req, res)=>{
 app.get('/api/:type', (req, res)=>{
     const {type} = req.params;
     if(type=='coding'){
-        res.send(civil)
+        res.send(cpp)
     }else{
         res.send('hello')
     }
