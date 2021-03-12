@@ -1,0 +1,9 @@
+.image__ {
+  clip-path: polygon(0 0, 100% 0, 75% 102%, 0% 102%);
+}
+
+@media (max-width: 768px) {
+  .image__ {
+    clip-path: polygon(0 0, 100% 0, 102% 72%, -10% 102%);
+  }
+}

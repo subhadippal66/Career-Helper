@@ -43,6 +43,9 @@ function Nav() {
         <div>
           <Link to="/branch"> Preference</Link>
         </div>
+        <div>
+          <Link to="/profile"> Profile</Link>
+        </div>
         <div
           aria-describedby={id}
           variant="contained"
