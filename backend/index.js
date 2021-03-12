@@ -3,9 +3,6 @@ const app = express()
 const port = 5000
 const router = express.Router()
 //database require
-const coding = require('./database/coding')
-const civil = require('./database/civil')
-const cpp = require('./database/cpp')
 
 
 const abc=  app.listen(port, ()=>{
@@ -25,7 +22,16 @@ app.get('/', (req, res)=>{
 
 app.get('/api/:type', (req, res)=>{
     const {type} = req.params;
-    res.send(coding)
+    const path = `./database/${type}`
+    const typeData = require(path)
+    res.send(typeData)
+})
+
+app.get('/api/:type/:course', (req, res)=>{
+    const {type, course} = req.params;
+    const path = `./database/${type}/${course}`
+    const courseData = require(path)
+    res.send(courseData)
 })
 
 module.exports = abc

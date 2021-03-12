@@ -8,6 +8,7 @@ import LoginPage from "./component/LoginPage";
 import Error404 from "./component/Error404";
 import BranchPage from "./component/BranchPage";
 import Profile from "./component/Profile";
+import Course from "./component/Course";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <PrivateRoute exact path="/" component={Dashboard} />
           <PrivateRoute path="/branch" component={BranchPage} />
           <PrivateRoute path="/profile" component={Profile} />
+          <PrivateRoute path="/cpp" component={Course} />
         </div>
         {/* <div>
           <Route path="*">

@@ -1,11 +1,12 @@
 module.exports = {
     heading: "C++",
     details: "C++ is a general-purpose programming language",
-    videos:[{name:'', url:''}],
+    videos:[{name:'C++ In a Nutshell by Hitesh Choudhary', url:'https://www.youtube.com/watch?v=F-hBIm2fZkA'}],
     box: [
         {
             heading: "Brief History of C++",
-            details: "The C++ programming language was invented in 1979 by Bjarne Stroustrup while working on his PhD thesis at Bell Labs. C++ was designed to be an extension of the programming language C. He included features such as classes, strong type checking, default function arguments, and basic inheritance",               
+            details: "The C++ programming language was invented in 1979 by Bjarne Stroustrup while working on his PhD thesis at Bell Labs. C++ was designed to be an extension of the programming language C. He included features such as classes, strong type checking, default function arguments, and basic inheritance",   
+            links:[{name:'Read more about History of C++', url:'https://en.wikipedia.org/wiki/C%2B%2B#History'}]            
         },
         {
             heading: "Introduction to C++ Programming",
@@ -105,5 +106,6 @@ module.exports = {
                 "C++ Program for Count total set bits in all numbers from 1 to n"
             ]
         }
-    ]
+    ],
+    tutorials : [{name:'C++ Basic', url:'https://www.youtube.com/watch?v=vLnPwxZdW4Y'}]
 }
