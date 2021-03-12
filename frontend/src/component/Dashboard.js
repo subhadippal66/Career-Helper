@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HomePageCard from "./HomePageCard";
 import axios from "axios";
+import Footer from "./Footer";
 
 function Dashboard() {
   const [pageData, setpageData] = useState();
@@ -19,7 +20,7 @@ function Dashboard() {
   // console.log(pageData);
 
   return (
-    <div className=" bg-gray-800 flex flex-col items-center pt-20">
+    <div className=" bg-gray-800 flex flex-col items-center pt-20 min-h-screen">
       <h1 className="font-bold font-mono tracking-widest uppercase text-gray-100 text-xl text-center pb-2">
         DashBoard Home
       </h1>
@@ -34,6 +35,7 @@ function Dashboard() {
           );
         })}
       </div>
+      <Footer />
     </div>
   );
 }

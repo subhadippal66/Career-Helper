@@ -10,6 +10,7 @@ import FormControl from "@material-ui/core/FormControl";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import Footer from "./Footer";
 
 function BranchPage() {
   const useStyles = makeStyles((theme) => ({
@@ -51,7 +52,7 @@ function BranchPage() {
   console.log(carrer);
 
   return (
-    <div className=" bg-gray-800 pt-20 flex flex-col items-center h-screen justify-start">
+    <div className=" bg-gray-800 pt-20 flex flex-col items-center min-h-screen justify-start">
       <div className=" bg-yellow-50 pb-6 rounded-xl">
         <FormControl className={classes.formControl}>
           <InputLabel shrink id="demo-simple-select-placeholder-label-label">
@@ -121,6 +122,7 @@ function BranchPage() {
           )}
         </Link>
       </div>
+      <Footer />
     </div>
   );
 }

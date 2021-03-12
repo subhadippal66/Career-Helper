@@ -25,11 +25,7 @@ app.get('/', (req, res)=>{
 
 app.get('/api/:type', (req, res)=>{
     const {type} = req.params;
-    if(type=='coding'){
-        res.send(cpp)
-    }else{
-        res.send('hello')
-    }
+    res.send(coding)
 })
 
 module.exports = abc

@@ -1,6 +1,7 @@
 module.exports = {
     heading: "C++",
     details: "C++ is a general-purpose programming language",
+    videos:[{name:'', url:''}],
     box: [
         {
             heading: "Brief History of C++",
@@ -19,7 +20,10 @@ module.exports = {
             heading: "DataTypes, Variables & Operators",
             details: "The building blocks of C++ programming are – DataTypes, Variables & Operators.You need to get a thorough understanding of data types and how they are used, what are variables, how they are declared and initialized, the use of operators in C++, etc",
             links: [
-                "Data Types",
+                {
+                    name: "Data Types",
+                    url: ''
+                },
                 "Variables in C++",
                 "Operators in C++",
                 "Reference Variable in C++",
