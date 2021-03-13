@@ -52,8 +52,11 @@ function BranchPage() {
   console.log(carrer);
 
   return (
-    <div className=" bg-gray-800 pt-20 flex flex-col items-center min-h-screen justify-start">
-      <div className=" bg-yellow-50 pb-6 rounded-xl">
+    <div className="  pt-20 flex flex-col items-center min-h-screen justify-start">
+      <div
+        className=" bg-yellow-50 bg-opacity-30 pb-6 rounded-xl"
+        style={{ backdropFilter: "blur(10px)" }}
+      >
         <FormControl className={classes.formControl}>
           <InputLabel shrink id="demo-simple-select-placeholder-label-label">
             Expertise

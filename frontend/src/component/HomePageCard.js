@@ -11,15 +11,15 @@ export default function OutlinedCard({
       <div
         className=" lowercase font-extrabold text-2xl rounded-2xl transform translate-y-4 py-2 px-12 text-center min-w-max z-10"
         style={{
-          backdropFilter: "blur(5px)",
+          backdropFilter: "blur(10px)",
           background:
-            "linear-gradient(90deg, rgba(255,235,0,0.5) 0%, rgba(253,187,45,0.5) 100%)",
+            "linear-gradient(90deg, rgba(255,235,0,0.3) 0%, rgba(253,187,45,0.3) 100%)",
         }}
       >
         <h1>{heading}</h1>
       </div>
       <div
-        className="flex flex-row justify-between rounded-2xl w-5/6 bg-white"
+        className="flex flex-row justify-between rounded-2xl w-5/6 bg-white bg-opacity-80"
         // style={{
         //   background:
         //     "linear-gradient(90deg, rgba(34,193,195,0.5) 0%, rgba(253,187,45,0.5) 100%)",
@@ -43,7 +43,7 @@ export default function OutlinedCard({
         </div>
 
         <div
-          className="py-6 flex flex-col justify-center items-center  rounded-r-2xl  cursor-pointer bg-yellow-300"
+          className="py-6 flex flex-col justify-center items-center  rounded-r-2xl  cursor-pointer bg-opacity-60 bg-yellow-600"
           // style={{
           //   backdropFilter: "blur(20px)",
           //   background:

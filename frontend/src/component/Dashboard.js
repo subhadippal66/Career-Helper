@@ -20,7 +20,7 @@ function Dashboard() {
   // console.log(pageData);
 
   return (
-    <div className=" bg-gray-800 flex flex-col items-center pt-20 min-h-screen">
+    <div className="  flex flex-col items-center pt-20 min-h-screen">
       <h1 className="font-bold font-mono tracking-widest uppercase text-gray-100 text-xl text-center pb-2">
         DashBoard Home
       </h1>
