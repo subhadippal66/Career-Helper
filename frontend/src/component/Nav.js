@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Popover } from "@material-ui/core";
 import LoginBtn from "./LoginBtn";
 import userLogo from "../media/user.png";
+import DehazeIcon from "@material-ui/icons/Dehaze";
 
 function Nav() {
   const [{ prefrence, user }, dispatch] = useStateValue();
@@ -88,6 +89,9 @@ function Nav() {
             )}
           </div>
         </Popover>
+        {/* <div className="md:hidden">
+          <DehazeIcon />
+        </div> */}
       </div>
     </div>
   );

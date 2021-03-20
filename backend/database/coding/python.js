@@ -1,3 +1,3 @@
 module.exports={
-    sndjnd : 'ajhhb'
+    heading : 'Python'
 }

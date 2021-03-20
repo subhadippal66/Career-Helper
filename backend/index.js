@@ -29,9 +29,19 @@ app.get('/api/:type', (req, res)=>{
 
 app.get('/api/:type/:course', (req, res)=>{
     const {type, course} = req.params;
-    const path = `./database/${type}/${course}`
-    const courseData = require(path)
-    res.send(courseData)
+    let courseData = null;
+    try{
+        courseData = require(`./database/${type}/${course}`)
+    }
+    catch{
+        courseData = null
+    }
+    
+    if(courseData){
+        res.send(courseData)
+    }else{
+        res.send('not Found')
+    }
 })
 
 module.exports = abc

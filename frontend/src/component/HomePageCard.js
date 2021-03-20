@@ -1,5 +1,6 @@
 import React from "react";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import { Link } from "react-router-dom";
 
 export default function OutlinedCard({
   heading = "loading...",
@@ -9,7 +10,7 @@ export default function OutlinedCard({
   return (
     <div className="my-4 flex flex-col items-center" style={{ width: "95vw" }}>
       <div
-        className=" lowercase font-extrabold text-2xl rounded-2xl transform translate-y-4 py-2 px-12 text-center min-w-max z-10"
+        className=" uppercase font-semibold tracking-wide sm:text-2xl text-lg rounded-2xl transform translate-y-4 py-2 px-12 text-center min-w-max z-10"
         style={{
           backdropFilter: "blur(10px)",
           background:
@@ -27,16 +28,18 @@ export default function OutlinedCard({
         // }}
       >
         <div className="flex flex-col justify-start items-start ml-5 mt-6">
-          <div className="font-mono font-bold text-xl mb-5">{details}</div>
+          <div className="font-mono font-light text-xl mb-5">{details}</div>
           <div className="inline-block mb-4">
             {links.map((value, index) => {
               return (
-                <div
-                  className="m-2 font-semibold text-black inline-block bg-yellow-300 hover:bg-yellow-600 duration-300 py-2 px-6 rounded-md cursor-pointer"
-                  key={index}
-                >
-                  {value}
-                </div>
+                <Link to={`/${value.toLowerCase()}`}>
+                  <div
+                    className="m-2 font-semibold text-black inline-block bg-yellow-300 hover:bg-yellow-600 duration-300 py-2 px-6 rounded-md cursor-pointer"
+                    key={index}
+                  >
+                    {value}
+                  </div>
+                </Link>
               );
             })}
           </div>
