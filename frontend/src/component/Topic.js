@@ -1,6 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ReadBox from "./topicPageComp/ReadBox";
+import ShortVideo from "./topicPageComp/ShortVideo";
+import TitleCard from "./topicPageComp/TitleCard";
 
 function Topic() {
   let { topic } = useParams();
@@ -16,9 +19,19 @@ function Topic() {
   console.log(topicData);
   if (topicData !== "not Found") {
     return (
-      <div className="pt-20">
-        <div className="text-center text-2xl font-mono text-white">
-          {topicData.heading}
+      <div className="pt-20 flex flex-col space-y-10">
+        <div className="">
+          <TitleCard
+            heading={topicData.heading}
+            image={topicData.image}
+            details={topicData.details}
+          />
+        </div>
+        <div>
+          <ShortVideo videos={topicData.videos} />
+        </div>
+        <div>
+          <ReadBox data={topicData.box} />
         </div>
       </div>
     );

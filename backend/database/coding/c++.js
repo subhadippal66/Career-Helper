@@ -1,7 +1,8 @@
 module.exports = {
     heading: "C++",
-    details: "C++ is a general-purpose programming language",
-    videos:[{name:'C++ In a Nutshell by Hitesh Choudhary', url:'https://www.youtube.com/watch?v=F-hBIm2fZkA'}],
+    image:'https://www.educative.io/v2api/editorpage/5393602882568192/image/6038586442907648',
+    details: "C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, or 'C with Classes'",
+    videos:[{name:'C++ In a Nutshell by Hitesh Choudhary', url:'https://www.youtube.com/watch?v=F-hBIm2fZkA'},{name:'C++ In a Nutshell by Hitesh Choudhary', url:'https://www.youtube.com/watch?v=F-hBIm2fZkA'}],
     box: [
         {
             heading: "Brief History of C++",
