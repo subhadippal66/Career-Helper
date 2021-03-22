@@ -8,7 +8,7 @@ import LoginPage from "./component/LoginPage";
 import Error404 from "./component/Error404";
 import BranchPage from "./component/BranchPage";
 import Profile from "./component/Profile";
-import Course from "./component/Course";
+// import Course from "./component/Course";
 import Topic from "./component/Topic";
 
 function App() {

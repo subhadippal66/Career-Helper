@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import ReadBox from "./topicPageComp/ReadBox";
 import ShortVideo from "./topicPageComp/ShortVideo";
 import TitleCard from "./topicPageComp/TitleCard";
+import Tutorial from "./topicPageComp/Tutorial";
+import Footer from "./Footer";
 
 function Topic() {
   let { topic } = useParams();
@@ -32,6 +34,12 @@ function Topic() {
         </div>
         <div>
           <ReadBox data={topicData.box} />
+        </div>
+        <div>
+          <Tutorial videos={topicData.tutorials} />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     );

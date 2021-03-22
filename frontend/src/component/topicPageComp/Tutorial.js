@@ -3,10 +3,9 @@ import Popup from "reactjs-popup";
 import YouTube from "react-youtube";
 import CancelIcon from "@material-ui/icons/Cancel";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
-import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
+import YouTubeIcon from "@material-ui/icons/YouTube";
 
-function ShortVideo({ videos }) {
-  console.log(videos);
+function Tutorial({ videos }) {
   const opts = {
     height: "390",
     width: "100%",
@@ -14,15 +13,14 @@ function ShortVideo({ videos }) {
       autoplay: 1,
     },
   };
-
   return (
     <div className="flex flex-col items-center text-center bg-white p-6 sm:mx-20 mx-4 rounded-2xl bg-opacity-80">
       <div className="flex flex-row space-x-2 items-center font-bold text-2xl bg-yellow-400 px-4 py-2 rounded-2xl transform -translate-y-12">
-        <h1>Topic introduction video</h1>
-        <VideoLibraryIcon fontSize="large" />
+        <h1>Free Courses</h1>
+        <YouTubeIcon fontSize="large" />
       </div>
       <div className="font-mono transform -translate-y-9 text-xl">
-        These videos will give you a brief idea about topic in a short time
+        Complete courses of some topic
       </div>
       <div className="flex flex-col w-5/6 sm:w-4/6 space-y-4 ">
         {videos?.map((video, i) => {
@@ -88,4 +86,4 @@ function ShortVideo({ videos }) {
   );
 }
 
-export default ShortVideo;
+export default Tutorial;

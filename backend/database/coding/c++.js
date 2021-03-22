@@ -7,7 +7,8 @@ module.exports = {
         {
             heading: "Brief History of C++",
             details: "The C++ programming language was invented in 1979 by Bjarne Stroustrup while working on his PhD thesis at Bell Labs. C++ was designed to be an extension of the programming language C. He included features such as classes, strong type checking, default function arguments, and basic inheritance",   
-            links:[{name:'Read more about History of C++', url:'https://en.wikipedia.org/wiki/C%2B%2B#History'}]            
+            links:[{name:'Read more about History of C++', url:'https://en.wikipedia.org/wiki/C%2B%2B#History'},
+            {name:'Read more about ', url:'https://en.wikipedia.org/wiki/C%2B%2B#History'}]            
         },
         {
             heading: "Introduction to C++ Programming",
