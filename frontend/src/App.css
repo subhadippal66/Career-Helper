@@ -1,5 +1,10 @@
 html {
-  background-image: url("https://wallpapershome.com/images/pages/pic_h/20035.jpg");
+  background-image: linear-gradient(
+    0deg,
+    rgba(190, 223, 246, 1) 0%,
+    rgba(253, 187, 45, 0.5) 100%
+  );
+
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;

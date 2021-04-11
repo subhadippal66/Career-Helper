@@ -22,7 +22,7 @@ function App() {
           <PrivateRoute path="/branch" component={BranchPage} />
           <PrivateRoute path="/profile" component={Profile} />
           {/* <PrivateRoute path="/cpp" component={Course} /> */}
-          <PrivateRoute path="/:topic">
+          <PrivateRoute path="/topic/:topic">
             <Topic />
           </PrivateRoute>
         </div>

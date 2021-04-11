@@ -5,7 +5,7 @@ module.exports = {
       {
         heading: "Coding Language",
         details: "Start with any one of the coding languages, Its recommanded you choose C++, Java or Python for solving problems.",
-        links: ["C", "C++", "Java", "Python", "Ruby"]
+        links: ["C", "C++", "Java", "Python"]
       },
       {
         heading: "Data Structure",

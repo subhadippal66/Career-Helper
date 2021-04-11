@@ -5,14 +5,27 @@ import {
   MenuItem,
   Select,
 } from "@material-ui/core";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import FormControl from "@material-ui/core/FormControl";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import Footer from "./Footer";
+import lottie from "lottie-web";
+import animation1 from "../media/animation1.json";
 
 function BranchPage() {
+  const container = useRef(null);
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: animation1,
+    });
+  }, []);
+
   const useStyles = makeStyles((theme) => ({
     formControl: {
       display: "flex",
@@ -49,14 +62,17 @@ function BranchPage() {
     setcarrer(event.target.value);
     localStorage.setItem("interested_field", event.target.value);
   };
-  console.log(carrer);
+  //console.log(carrer);
 
   return (
-    <div className="  pt-20 flex flex-col items-center min-h-screen justify-start">
-      <div
-        className=" bg-yellow-50 bg-opacity-30 pb-6 rounded-xl"
-        style={{ backdropFilter: "blur(10px)" }}
-      >
+    <div className=" pt-16 flex flex-col items-center h-screen justify-start">
+      <div className="p-1 text-2xl tracking-widest font-thin ring-yellow-500 my-1">
+        One Last Step
+      </div>
+      <div className="font-mono text-xl ">Choose Your Preference</div>
+      <div ref={container} className=" h-48"></div>
+
+      <div className=" bg-yellow-50 pb-6 ring-4 rounded-xl">
         <FormControl className={classes.formControl}>
           <InputLabel shrink id="demo-simple-select-placeholder-label-label">
             Expertise
@@ -98,7 +114,7 @@ function BranchPage() {
                 {localStorage.getItem("branch") || "none"}
               </div>
             </MenuItem>
-            <MenuItem value="Computer Science">Computer Science</MenuItem>
+            <MenuItem value="Computer">Computer Science</MenuItem>
             <MenuItem value="Civil">Civil </MenuItem>
             <MenuItem value="Electrical">Electrical</MenuItem>
             <MenuItem value="Electronics">Electronics</MenuItem>
@@ -125,6 +141,7 @@ function BranchPage() {
           )}
         </Link>
       </div>
+      <div className="font-mono my-8">*You can also change this later</div>
       <Footer />
     </div>
   );

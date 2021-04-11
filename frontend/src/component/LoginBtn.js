@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, Redirect, useHistory } from "react-router-dom";
 import { useStateValue } from "../Stateprovider";
 import { auth } from "../firebase";
 import firebase from "firebase";
 import googlePNG from "../media/google.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function LoginBtn({ imageSize }) {
   const [{ user }, dispatch] = useStateValue();
@@ -39,13 +41,38 @@ function LoginBtn({ imageSize }) {
           localStorage.setItem("userEmail", auth.user.email);
           localStorage.setItem("authToken", auth.credential.idToken);
           localStorage.setItem("userImage", auth.user.photoURL);
-          history.push("/");
+          toast.success("Log-in success ✅", {
+            toastId: 3,
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+          });
+          history.push("/login");
           handleClick();
+          // return (
+          //   <>
+          //     <Redirect to={{pathname:'/branch'}} />
+          //   </>
+          // );
         }
       })
       .catch((e) => {
         alert(e.message);
         localStorage.clear();
+        toast.error("Login Failed 🚫", {
+          toastId: 4,
+          position: "bottom-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+        });
       });
   };
 
@@ -53,6 +80,11 @@ function LoginBtn({ imageSize }) {
 
   const handleClick = () => {
     setOpen(true);
+    // return (
+    //   <>
+    //     <Redirect to={{ pathname: "/branch" }} />
+    //   </>
+    // );
   };
 
   const handleClose = (event, reason) => {
@@ -70,10 +102,14 @@ function LoginBtn({ imageSize }) {
     >
       <div className="mr-1">LOG-IN</div>
       <img
+        alt=""
         src={googlePNG}
         className="select-none"
         style={{ height: `${imageSize}px` }}
       />
+      <ToastContainer containerId={3} />
+      <ToastContainer containerId={4} />
+      {/* {open ? (<Redirect to={{pathname:'/branch'}}/>) : (<>)} */}
     </div>
   );
 }

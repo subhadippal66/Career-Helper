@@ -22,10 +22,7 @@ function Profile() {
   return (
     <div>
       <div className="pt-20 w-full h-screen flex flex-row justify-center items-center ">
-        <div
-          className="flex md:flex-row flex-col md:w-96 md:h-72 w-72 h-96 bg-gray-300 bg-opacity-30 rounded-2xl"
-          style={{ backdropFilter: "blur(5px)" }}
-        >
+        <div className="flex md:flex-row flex-col md:w-96 md:h-72 w-72 h-96 bg-gray-300 ring rounded-2xl">
           <div
             className=" image__ md:w-1/2 md:h-auto  h-1/2 md:rounded-l-2xl md:rounded-r-none rounded-t-2xl "
             style={{

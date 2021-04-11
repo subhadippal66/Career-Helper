@@ -10,9 +10,8 @@ export default function OutlinedCard({
   return (
     <div className="my-4 flex flex-col items-center" style={{ width: "95vw" }}>
       <div
-        className=" uppercase font-semibold tracking-wide sm:text-2xl text-lg rounded-2xl transform translate-y-4 py-2 px-12 text-center min-w-max z-10"
+        className=" ring ring-yellow-400 uppercase font-semibold tracking-wide sm:text-2xl text-sm rounded-2xl transform translate-y-4 py-2 sm:px-12 px-2 text-center min-w-max z-10"
         style={{
-          backdropFilter: "blur(10px)",
           background:
             "linear-gradient(90deg, rgba(255,235,0,0.3) 0%, rgba(253,187,45,0.3) 100%)",
         }}
@@ -32,7 +31,7 @@ export default function OutlinedCard({
           <div className="inline-block mb-4">
             {links.map((value, index) => {
               return (
-                <Link to={`/${value.toLowerCase()}`}>
+                <Link to={`/topic/${value.toLowerCase()}`}>
                   <div
                     className="m-2 font-semibold text-black inline-block bg-yellow-300 hover:bg-yellow-600 duration-300 py-2 px-6 rounded-md cursor-pointer"
                     key={index}

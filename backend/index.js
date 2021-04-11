@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000;
 const router = express.Router()
+const subNotAvaliable = require('./database/not_avaliable')
+const topicNotAvaliable = require('./database/not_avaliable_topic')
 //database require
 
 
-const abc=  app.listen(port, ()=>{
+const abc=  app.listen(process.env.PORT || 3000, ()=>{
     console.log('server started')
 })
 
@@ -22,9 +24,22 @@ app.get('/', (req, res)=>{
 
 app.get('/api/:type', (req, res)=>{
     const {type} = req.params;
-    const path = `./database/${type}`
-    const typeData = require(path)
-    res.send(typeData)
+    let path = null;
+    try{
+        path = require(`./database/${type}`)
+    }
+    catch{
+        path = null
+    }
+
+    if(path){
+        const path = `./database/${type}`
+        const typeData = require(path)
+        res.send(typeData)
+    }else[
+        res.send(subNotAvaliable)
+    ]
+
 })
 
 app.get('/api/:type/:course', (req, res)=>{
@@ -40,7 +55,7 @@ app.get('/api/:type/:course', (req, res)=>{
     if(courseData){
         res.send(courseData)
     }else{
-        res.send('not Found')
+        res.send(topicNotAvaliable)
     }
 })
 
