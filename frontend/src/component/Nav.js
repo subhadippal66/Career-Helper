@@ -21,6 +21,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import TuneIcon from "@material-ui/icons/Tune";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import icon from "../media/reading.svg";
+import InfoIcon from "@material-ui/icons/Info";
 
 const useStyles = makeStyles({
   list: {
@@ -113,6 +114,13 @@ function Nav() {
           </div>
         </Link>
         <Divider />
+        <Link to="/about">
+          <div className="sm:hidden flex flex-row justify-start space-x-2 items-center p-4 hover:bg-gray-400 duration-200">
+            <InfoIcon />
+            <div>About</div>
+          </div>
+        </Link>
+        <Divider />
       </List>
     </div>
   );
@@ -125,7 +133,7 @@ function Nav() {
         </div>
         <sup className="font-light text-gray-300">beta</sup>
       </div>
-      <div className="flex flex-row items-center sm:gap-4">
+      <div className="flex flex-row items-center sm:gap-2">
         <Link to="/">
           <div className="sm:flex flex-row items-center space-x-1 hidden hover:bg-gray-700 duration-200 text-gray-300 hover:text-green-200 py-2 px-4 cursor-pointer">
             <HomeIcon />
@@ -142,6 +150,12 @@ function Nav() {
           <div className="sm:flex flex-row items-center space-x-1 hidden hover:bg-gray-700 duration-200 text-gray-300 hover:text-green-200 py-2 px-4 cursor-pointer">
             <AccountCircleIcon />
             <div>Profile</div>
+          </div>
+        </Link>
+        <Link to="/about">
+          <div className="sm:flex flex-row items-center space-x-1 hidden hover:bg-gray-700 duration-200 text-gray-300 hover:text-green-200 py-2 px-4 cursor-pointer">
+            <InfoIcon />
+            <div>About</div>
           </div>
         </Link>
 

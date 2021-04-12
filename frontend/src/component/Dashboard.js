@@ -55,7 +55,7 @@ function Dashboard() {
   return (
     <div className="  flex flex-col items-center pt-20 min-h-screen">
       <h1 className="font-bold font-mono tracking-widest uppercase text-xl text-center pb-2">
-        DashBoard Home
+        Home 🏠
       </h1>
 
       {pageData ? (
@@ -77,7 +77,7 @@ function Dashboard() {
           </div>
         </>
       ) : (
-        <div className=" pt-6 flex flex-col space-y-2 justify-start items-center min-h-screen">
+        <div className=" fixed pt-20 flex flex-col space-y-2 justify-start items-center min-h-screen">
           <CircularProgress color="secondary" />
           <div className="font-extrabold text-2xl">loading</div>
           <div className="text-sm text-center p-4">

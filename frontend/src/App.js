@@ -10,6 +10,7 @@ import BranchPage from "./component/BranchPage";
 import Profile from "./component/Profile";
 // import Course from "./component/Course";
 import Topic from "./component/Topic";
+import AboutPage from "./component/AboutPage";
 
 function App() {
   return (
@@ -18,13 +19,14 @@ function App() {
         <div>
           <Nav />
           <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/about" component={AboutPage} />
           <PrivateRoute exact path="/" component={Dashboard} />
           <PrivateRoute path="/branch" component={BranchPage} />
           <PrivateRoute path="/profile" component={Profile} />
           {/* <PrivateRoute path="/cpp" component={Course} /> */}
-          <PrivateRoute path="/topic/:topic">
-            <Topic />
-          </PrivateRoute>
+          <PrivateRoute path="/topic/:topic" component={Topic} />
+          {/* <Topic />
+          </PrivateRoute> */}
         </div>
         {/* <div>
           <Route path="*">

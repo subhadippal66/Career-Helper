@@ -9,54 +9,37 @@ module.exports = {
       },
       {
         heading: "STRENGTH OF MATERIALS",
-        details: "",
+        details: "Strength of materials, also called mechanics of materials, deals with the behavior of solid objects subject to stresses and strains. The study of strength of materials often refers to various methods of calculating the stresses and strains in structural members, such as beams, columns, and shafts.",
         links: [
-          "Analysis of Stress and Strain",
-          "Bending and Shear Stresses",
-          "Torsion",
-          "Thin and Thick Cylinders & Spheres",
-          "Deflections of Beams",
-          "Columns and Theories of Failure", 
+          "Strength of materials"
         ]
       },
       {
         heading: "BUILDING MATERIALS AND CONSTRUCTION",
-        details: "",
+        details: "Building material is any material used for construction purpose such as materials for house building. Wood, cement, aggregates, metals, bricks, concrete, clay are the most common type of building material used in construction. The choice of these are based on their cost effectiveness for building projects.",
         links: [
           "Building Material And Construction"
         ]
       },
       {
         heading: "ENGINEERING GEOLOGY AND SEISMOLOGY",
-        details: "",
+        details: "Seismology is study of the generation, propagation and recording of the elastic waves and the source that produce them. Engineering geology is the application of geological data, techniques and principles to the study of rock and soil surfacing materials, and ground water.",
         links: ["Geology And Seismology"]
       },
       {
         heading: "FLUID MECHANICS-I",
-        details: "",
+        details: "Fluid mechanics is the study of fluid behavior (liquids, gases, blood, and plasmas) at rest and in motion. Fluid mechanics has a wide range of applications in mechanical and chemical engineering, in biological systems, and in astrophysics.",
         links: ["Fluid Mechanics Part 1"]
       },
       {
         heading: "Concrete Technology",
-        details: "",
-        links: ["Cement", "Aggregates", "Water", "Admixtures", 
-        "Process of manufacture of Concrete", "Properties of fresh concrete",
-        "Properties of Hardened concrete",
-        "Special concrete",
-        "Non-destructive testing of concrete",
-        "Mix Design"
-        
-    ]
+        details: "Concrete technology deals with study of properties of concrete and its practical applications. ... Various types of cements are used for concrete works which have different properties and applications. Some of the type of cement are Portland Pozzolana Cement (PPC), rapid hardening cement, Sulphate resistant cement etc.",
+        links: ["Concrete Technology"]
       },
       {
         heading: "Survey-II",
         details: "",
-        links: ["Curves", "Triangulation",
-                "Adjustments of observations",
-                "Field Astronomy",
-                "Hydrographic Survey",
-                "Photogrammetry"                
-                ]
+        links: ["Survey Part 2"]
       },
       {
         heading: "Structural Analysis-I",
@@ -71,24 +54,12 @@ module.exports = {
       {
         heading: "Geotechnical Engineering-I",
         details: "",
-        links: ["Soil formation, Properties and Classification of soils",
-                "Permeability and Capillarity",
-                "Soil Compaction",
-                "Consolidation of Soils",
-                "Shear Strength of Soils",
-                "Stresses in Soils"
-        ]
+        links: ["Geotechnical Engineering-I"]
       },
       {
         heading: "Design of Concrete Structures - I",
         details: "",
-        links: ["Working Stress Design",
-                "Limit State Design",
-                "Behaviour of Section",
-                "Design of Slab & Staircase",
-                "Design of Compression Members",
-                "Design of Columns"
-        ]
+        links: ["Design of Concrete Structures - I"]
       },
       {
         heading: "Structural Analysis – II",
@@ -98,68 +69,32 @@ module.exports = {
       {
         heading: "Geotechnical Engineering - II",
         details: "",
-        links: ["Earth Pressure and Retaining Walls",
-                "Stability of Slopes",
-                "Site investigation and soil Exploration",
-                "Foundation",
-                "Shallow Foundations",
-                "Deep Foundations"
-        ]
+        links: ["Geotechnical Engineering - II"]
       },
       {
         heading: "Water Resources Engineering",
         details: "",
-        links: ["Hydrology",
-                "Precipitation",
-                "Abstractions from precipitation",
-                "Groundwater",
-                "Hydrographs",
-                "Design Flood"
-        ]
+        links: ["Water Resources Engineering"]
       },
       {
         heading: "Design of Steel Structures",
         details: "",
-        links: ["Materials and specifications",
-                "Tension member",
-                "Compression member",
-                "Beams",
-                "Plate girders",
-                "Plastic design"
-        ]
+        links: ["Design of Steel Structures"]
       },
       {
         heading: "Environmental Engineering-I",
         details: "",
-        links: ["Scope of Environmental Engineering",
-                "Sources of water",
-                "Sanitary plumbing",
-                "Natural methods of wastewater disposal",
-                "Plate girders",
-                "Plastic design"
-        ]
+        links: ["Environmental Engineering-I"]
       },
       {
         heading: "Design of Concrete Structure-II",
         details: "",
-        links: ["Design of Footings",
-                "Design of Beams for Flexure",
-                "Design of Flat & Circular Slabs",
-                "Design of Circular Water Tanks",
-                "Design of Rectangular Water Tanks",
-                "Design of Retaining Walls"
-        ]
+        links: ["Design of Concrete Structure-II"]
       },
       {
         heading: "Transportation Engineering-I",
         details: "",
-        links: ["Highway Development in India",
-                "Geometric Design of Highways",
-                "Traffic Engineering",
-                "Pavement Analysis and Design",
-                "Highway Construction",
-                "Highway Failures and Maintenance"
-        ]
+        links: ["Transportation Engineering-I"]
       },
       {
         heading: "Estimating & Costing & Valuation",

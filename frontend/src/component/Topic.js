@@ -22,7 +22,7 @@ function Topic() {
   console.log(topicData);
   //if (topicData !== "not Found") {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full">
       {topicData ? (
         <div className="pt-20 flex flex-col space-y-10">
           <div className="">
@@ -41,9 +41,10 @@ function Topic() {
           <div>
             <Tutorial videos={topicData.tutorials} />
           </div>
+          <Footer />
         </div>
       ) : (
-        <div className=" pt-36 flex flex-col  space-y-2 justify-center items-center min-h-screen">
+        <div className=" w-screen fixed pt-20 flex flex-col space-y-2 justify-start items-center min-h-screen">
           <CircularProgress color="secondary" />
           <div className="font-extrabold text-2xl">loading</div>
           <div className="text-sm text-center p-4">
@@ -51,8 +52,6 @@ function Topic() {
           </div>
         </div>
       )}
-
-      <Footer />
     </div>
   );
   // } else {
