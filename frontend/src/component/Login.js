@@ -27,11 +27,12 @@ function Login() {
         }}
       >
         <div className="flex flex-col justify-around items-center">
-          <h1 className="text-5xl font-extrabold m-8">
-            a place to find a roadmap
+          <h1 className="sm:text-5xl text-3xl font-extrabold my-4 sm:my-8 p-2">
+            platform that provide you a learning path
           </h1>
           <h2>
-            A Place where you find a roadmap to complete your dream for Free
+            "Success Ke Peeche Mat Bhaago, Excellence Ka Peecha Karo, Success
+            Jhak Maarke Tumhare Peeche Ayegi"
           </h2>
         </div>
         {user ? (

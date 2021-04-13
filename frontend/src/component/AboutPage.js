@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import About_rev from "./About/About_rev";
 import subha from "../media/subhadip.jpg";
 import MailIcon from "@material-ui/icons/Mail";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import Footer from "./Footer";
 
 function AboutPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="pt-20 ">
       <div className=" min-h-screen">
@@ -54,7 +56,6 @@ function AboutPage() {
           </a>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -11,12 +11,13 @@ import Profile from "./component/Profile";
 // import Course from "./component/Course";
 import Topic from "./component/Topic";
 import AboutPage from "./component/AboutPage";
+import Footer from "./component/Footer";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <div>
+        <div className="min-h-screen">
           <Nav />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/about" component={AboutPage} />
@@ -27,6 +28,7 @@ function App() {
           <PrivateRoute path="/topic/:topic" component={Topic} />
           {/* <Topic />
           </PrivateRoute> */}
+          <Footer />
         </div>
         {/* <div>
           <Route path="*">

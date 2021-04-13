@@ -6,8 +6,12 @@ import { CircularProgress } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loading from "./utils/Loading";
 
 function Dashboard() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const history = useHistory();
   const [pageData, setpageData] = useState(null);
   const [boxData, setboxData] = useState([1, 2, 3, 4]);
@@ -53,7 +57,7 @@ function Dashboard() {
   // console.log(pageData);
 
   return (
-    <div className="  flex flex-col items-center pt-20 min-h-screen">
+    <div className="flex flex-col items-center pt-20 min-h-screen">
       <h1 className="font-bold font-mono tracking-widest uppercase text-xl text-center pb-2">
         Home 🏠
       </h1>
@@ -77,16 +81,16 @@ function Dashboard() {
           </div>
         </>
       ) : (
-        <div className=" fixed pt-20 flex flex-col space-y-2 justify-start items-center min-h-screen">
-          <CircularProgress color="secondary" />
-          <div className="font-extrabold text-2xl">loading</div>
-          <div className="text-sm text-center p-4">
-            Data is loading from our database, please wait ......
-          </div>
-        </div>
+        <Loading />
+        // <div className=" fixed pt-20 flex flex-col space-y-2 justify-start items-center min-h-screen">
+        //   <CircularProgress color="secondary" />
+        //   <div className="font-extrabold text-2xl">loading</div>
+        //   <div className="text-sm text-center p-4">
+        //     Data is loading from our database, please wait ......
+        //   </div>
+        // </div>
       )}
 
-      <Footer />
       <div>
         <ToastContainer
           toastId={1}

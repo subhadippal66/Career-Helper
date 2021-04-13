@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useStateValue } from "../Stateprovider";
 import "./customstyle/profile.css";
 import { auth } from "../firebase";
@@ -6,6 +6,9 @@ import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
 
 function Profile() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const image = localStorage.getItem("userImage");
   const [{ prefrence, user }, dispatch] = useStateValue();
   const token = localStorage.getItem("authToken") || null;
@@ -18,7 +21,7 @@ function Profile() {
       history.push("/login");
     }
   };
-  console.log(user);
+  //console.log(user);
   return (
     <div>
       <div className="pt-20 w-full h-screen flex flex-row justify-center items-center ">
@@ -48,7 +51,6 @@ function Profile() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

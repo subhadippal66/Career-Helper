@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Login from "./Login";
 import "react-toastify/dist/ReactToastify.css";
 import About1 from "./About/About1";
@@ -8,6 +8,9 @@ import subha from "../media/subhadip.jpg";
 import Footer from "./Footer";
 
 function LoginPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Login />
@@ -21,7 +24,6 @@ function LoginPage() {
         heading="Meet the developer 👨🏻‍💻"
         details="Hi, My name is Subhadip Pal. I am a MERN stack developer."
       />
-      <Footer />
     </div>
   );
 }

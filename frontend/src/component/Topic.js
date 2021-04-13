@@ -7,8 +7,12 @@ import TitleCard from "./topicPageComp/TitleCard";
 import Tutorial from "./topicPageComp/Tutorial";
 import Footer from "./Footer";
 import { CircularProgress } from "@material-ui/core";
+import Loading from "./utils/Loading";
 
 function Topic() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   let { topic } = useParams();
   const [topicData, settopicData] = useState(null);
   const backendUrl = `https://target-backend-66.herokuapp.com/api/coding/${topic}`;
@@ -41,16 +45,16 @@ function Topic() {
           <div>
             <Tutorial videos={topicData.tutorials} />
           </div>
-          <Footer />
         </div>
       ) : (
-        <div className=" w-screen fixed pt-20 flex flex-col space-y-2 justify-start items-center min-h-screen">
-          <CircularProgress color="secondary" />
-          <div className="font-extrabold text-2xl">loading</div>
-          <div className="text-sm text-center p-4">
-            Data is loading from our database, please wait ......
-          </div>
-        </div>
+        <Loading />
+        // <div className=" w-screen fixed pt-20 flex flex-col space-y-2 justify-start items-center min-h-screen">
+        //   <CircularProgress color="secondary" />
+        //   <div className="font-extrabold text-2xl">loading</div>
+        //   <div className="text-sm text-center p-4">
+        //     Data is loading from our database, please wait ......
+        //   </div>
+        // </div>
       )}
     </div>
   );

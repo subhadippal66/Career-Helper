@@ -6,6 +6,7 @@ import firebase from "firebase";
 import googlePNG from "../media/google.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 function LoginBtn({ imageSize }) {
   const [{ user }, dispatch] = useStateValue();
@@ -36,22 +37,25 @@ function LoginBtn({ imageSize }) {
       .signInWithPopup(g_provider)
       .then((auth) => {
         if (auth) {
-          console.log(auth);
+          //console.log(auth);
           localStorage.setItem("userName", auth.user.displayName);
           localStorage.setItem("userEmail", auth.user.email);
           localStorage.setItem("authToken", auth.credential.idToken);
           localStorage.setItem("userImage", auth.user.photoURL);
-          toast.success("Log-in success ✅", {
+          toast.success(`Welcome back ${auth.user.displayName} 🕺🏼`, {
             toastId: 3,
             position: "bottom-right",
-            autoClose: 2000,
+            autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: false,
             draggable: false,
             progress: undefined,
           });
-          history.push("/login");
+          setTimeout(() => {
+            history.push("/");
+          }, 200);
+
           handleClick();
           // return (
           //   <>
