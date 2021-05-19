@@ -4,7 +4,7 @@
 2. npm run start (frontend)
 3. nodemon start (backend)
 
-###Build in MERN stack.
+#### Build in MERN stack
 
 ### live webpage
 #### https://targettree.tech/
